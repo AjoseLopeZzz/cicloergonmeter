@@ -1,0 +1,378 @@
+/* Estilos generales */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat Alternates", sans-serif;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+}
+
+/* Estilos para pantallas grandes */
+.header1 {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 30px 10%;
+  background-color: #ff0000;
+}
+
+.logo {
+  margin-right: auto;
+  cursor: pointer;
+  color: white;
+  font-weight: 500;
+  font-size: 24px;
+}
+
+.LogoU {
+  width: 70px; /* Ancho de la imagen */
+  height: 70px; /* Altura ajustada automáticamente */
+  position: relative;
+  top: 0px;
+  left: -600px;
+}
+
+.nav_links {
+  list-style: none;
+  display: flex;
+}
+
+.nav_links li {
+  padding: 0px 20px;
+}
+
+.nav_links li a {
+  color: #ecf0f1;
+  text-decoration: none;
+  transition: all 0.3s ease 0;
+}
+
+.nav_links li a:hover {
+  color: grey;
+}
+
+.boton {
+  padding: 9px 25px;
+  background-color: #fda367;
+  color: white;
+  margin-left: 20px;
+  border: none;
+  transition: all 0.3s ease 0;
+  outline: none;
+}
+
+.boton:hover {
+  background-color: grey;
+}
+
+/* Estilos para pantallas pequeñas */
+@media only screen and (max-width: 768px) {
+  .header1 {
+    justify-content: space-between;
+    padding: 20px;
+  }
+
+  .logo {
+    font-size: 10px;
+  }
+
+  .nav_links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    background-color: #372750;
+    width: 100%;
+    padding: 10px 0;
+    z-index: 1;
+  }
+
+  .nav_links.show {
+    display: flex;
+  }
+
+  .nav_links li {
+    padding: 10px 20px;
+    text-align: center;
+  }
+
+  .boton {
+    display: block;
+    margin-left: auto;
+    margin-top: 10px;
+  }
+}
+
+/*Que es*/
+
+.fondo {
+  background-color: white; /* Light mode background */
+  color: #1f2937; /* Default text color */
+}
+
+/* Container Styles */
+.contenedor {
+  max-width: 720px; /* Set a maximum width for responsiveness */
+  margin: 0 auto; /* Center the container horizontally */
+  padding: 3.75rem 1.875rem; /* Consistent padding for various elements within */
+}
+
+/* First Inner Container Styles (hidden on smaller screens) */
+.tercio {
+  display: none; /* Hide on screens smaller than large */
+}
+
+/* Second Inner Container Styles (visible on larger screens) */
+.oculto.secundario {
+  background-color: #f0f2f5; /* Light mode background color (assuming "bg-quad-100" is not defined) */
+  display: block; /* Show on screens larger than large */
+}
+
+/* Heading Styles */
+.titulo {
+  font-size: 1.5rem; /* Base font size for headings */
+  font-weight: 500; /* Base font weight for headings */
+  margin-bottom: 1rem; /* Consistent margin for headings */
+  position: relative;
+  left: -25%;
+}
+
+/* Emphasized Text Styles (.nuevo class not defined in HTML) */
+.nuevo {
+  color: red; /* Assuming you want "new" text to be red */
+}
+
+/* Image Styles */
+#secSecImg {
+  border-radius: 0.5rem; /* Rounded corners for the image */
+  width: 60%; /* Image takes up full width by default */
+  position: relative;
+  left: -25%;
+}
+
+/* Paragraph Styles */
+.gris {
+  color: #6b7280; /* Light mode text color for paragraphs */
+  position: absolute;
+  top: 54%;
+  left: 45%;
+}
+
+.titulo-grande {
+  position: absolute;
+  top: 45%;
+  left: 45%;
+}
+
+@media screen and (max-width: 768px) {
+  .titulo {
+    font-size: 1.25rem; /* Reducir el tamaño de fuente para pantallas más pequeñas */
+    left: 0; /* Centrar el título en pantallas más pequeñas */
+  }
+
+  #secSecImg {
+    width: 100%; /* Hacer que la imagen ocupe todo el ancho en pantallas más pequeñas */
+    left: 0; /* Centrar la imagen en pantallas más pequeñas */
+  }
+
+  .gris,
+  .titulo-grande {
+    position: static; /* Hacer que los párrafos y títulos se muestren de forma estática en pantallas más pequeñas */
+  }
+}
+
+.fadeIn {
+  animation: fadeInAnimation 2s ease-in-out forwards;
+}
+
+@keyframes fadeInAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Purebas */
+
+.encabezadoSeccion {
+  display: none; /* Ocultar el título original */
+}
+
+.tituloCaracteristicas {
+  width: 100%; /* Ocupar todo el ancho disponible */
+  text-align: center; /* Centrar el texto */
+  margin-bottom: 5px; /* Espacio debajo del título */
+  padding: 5%;
+}
+
+.fila {
+  display: flex; /* Mostrar los elementos en una fila */
+  flex-wrap: wrap; /* Permitir que se envuelvan a una nueva línea si no hay suficiente espacio */
+  justify-content: space-around; /* Distribuir las cajas uniformemente en la fila */
+  align-items: flex-start; /* Alinear las cajas en la parte superior de la fila */
+}
+
+.caja {
+  flex: 1 1 45%; /* Ocupar el 45% del ancho disponible (casi la mitad de la fila) */
+  margin: 10px; /* Margen entre las cajas */
+  text-align: center; /* Centrar el contenido */
+  transition: all 0.2s ease-out;
+  padding: 24px 4px;
+  background-color: #0078af;
+  color: #fff;
+  box-shadow: 9px 9px 16px 0px rgba(0, 0, 0, 0.25);
+}
+
+.caja:hover {
+  background-color: #e47618;
+  transform: scale(1.1);
+  color: #fff;
+}
+
+.caja > p {
+  width: 85%;
+  text-align: center;
+  margin-top: 0;
+  transform: translate(10%, 0%);
+}
+
+@media screen and (max-width: 768px) {
+  .caja {
+    margin: 5px; /* Reducir el margen en pantallas pequeñas */
+  }
+}
+
+/* Datos */
+
+#healthySection {
+  padding-top: 0.4%;
+  padding-bottom: 4%;
+}
+
+#healthySection p {
+  text-align: center;
+  color: #6b7280;
+  font-size: 1.3rem;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.eatSure {
+  background-color: #efddc9;
+  border-radius: 22px;
+}
+
+.eatSure .row {
+  width: 100%;
+  padding: 25px 0;
+  margin: auto;
+}
+
+.eatSure .row .col-sm-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 0.9rem;
+  padding: 10px;
+}
+
+.borderLeft {
+  border-left: 1px solid black;
+}
+
+.icon-wrapper {
+  background-color: #e89b3d;
+  padding: 2px 6px;
+  border-radius: 3px;
+  padding-top: 0;
+}
+
+.eatSure .icon-wrapper svg {
+  width: 10px;
+  height: 10px;
+}
+
+.text {
+  margin-top: 10px;
+}
+
+.knowMoreBtn {
+  border-radius: 22px;
+}
+
+.knowMoreBtn:hover {
+  color: snow;
+}
+
+.safetyMeasuresDiv {
+  margin: 3% auto;
+  text-align: center;
+  color: snow;
+}
+
+.safetyMeasuresDiv .safetyMeasuresPara {
+  font-size: 1.1rem;
+}
+
+.safetyMeasures {
+  margin: 3% auto;
+}
+
+.safetyMeasures .col-sm-3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.safetyMeasures .col-sm-3 p {
+  margin-top: 10px;
+}
+
+/* Funcionamiento */
+
+.equipo {
+  padding: 30px;
+}
+
+.equipo h2 {
+  color: black;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.equipo .contenedor_equipo {
+  display: flex;
+}
+
+.equipo .contenedor_equipo .video_equipo {
+  width: 50%;
+  padding: 20px;
+  left: 35%;
+}
+
+.equipo .contenedor_equipo .video_equipo iframe {
+  width: 100%;
+  border: 8px solid #ff0000;
+  outline: none;
+}
+
+.equipo .contenedor_equipo .contenido_equipo {
+  width: 40%;
+  padding: 20px;
+  margin-left: 50px;
+  margin-top: 2%;
+  font-size: 20px;
+}
